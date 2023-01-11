@@ -1,0 +1,52 @@
+<h1 class="mt-4">Clientes</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Consulta</li>
+</ol>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <button class="btn-warning" (click)="novoCadastro()">
+                <i class="fa fa-plus"></i> Novo
+            </button>
+        </div>
+    </div>
+    <br /> 
+    <div class="row">
+        <div class="col-md-12">
+           <table class="table table-condensed table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NOME</th>
+                    <th>CPF</th>
+                    <th>LADRADOURO</th>
+                    <th>BAIRRO</th>
+                    <th>CIDADE</th>
+                    <th>UF</th>
+                    <th>CEP</th>
+                    <th>TEL. RESIDENCIAL</th>
+                    <th>TEL. COMERCIAL</th>
+                    <th>TEL. CELULAR</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cliente of clientes">
+                    <td>{{ cliente.id }}</td>
+                    <td>{{ cliente.nome }}</td>
+                    <td>{{ cliente.cpf }}</td>
+                    <td>{{ cliente.logradouro }}</td>
+                    <td>{{ cliente.bairro }}</td>
+                    <td>{{ cliente.cidade }}</td>
+                    <td>{{ cliente.uf }}</td>
+                    <td>{{ cliente.cep }}</td>
+                    <td>{{ cliente.telResidencial }}</td>
+                    <td>{{ cliente.telComercial }}</td>
+                    <td>{{ cliente.telCelular }}</td>
+                    <td></td>                    
+                </tr>
+            </tbody>
+           </table> 
+        </div>
+    </div>
+</div>
